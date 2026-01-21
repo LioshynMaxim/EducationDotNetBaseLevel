@@ -1,0 +1,116 @@
+### Module17 Web API - HTTP Request Tests
+### Use this file in Visual Studio or VS Code with REST Client extension
+
+@baseUrl = https://localhost:5001
+@categoriesUrl = {{baseUrl}}/api/categories
+@productsUrl = {{baseUrl}}/api/products
+
+### ============================================
+### CATEGORIES API
+### ============================================
+
+### 1. Get all categories
+GET {{categoriesUrl}}
+Accept: application/json
+
+### 2. Get category by ID
+GET {{categoriesUrl}}/1
+Accept: application/json
+
+### 3. Create new category
+POST {{categoriesUrl}}
+Content-Type: application/json
+
+{
+  "categoryName": "Electronics",
+  "description": "Electronic devices and gadgets"
+}
+
+### 4. Update category
+PUT {{categoriesUrl}}/1
+Content-Type: application/json
+
+{
+  "categoryID": 1,
+  "categoryName": "Beverages - Updated",
+  "description": "Soft drinks, coffees, teas, beers, and ales - Updated"
+}
+
+### 5. Delete category (use with caution)
+DELETE {{categoriesUrl}}/9
+
+### ============================================
+### PRODUCTS API
+### ============================================
+
+### 6. Get all products
+GET {{productsUrl}}
+Accept: application/json
+
+### 7. Get product by ID
+GET {{productsUrl}}/1
+Accept: application/json
+
+### 8. Create new product
+POST {{productsUrl}}
+Content-Type: application/json
+
+{
+  "productName": "New Energy Drink",
+  "categoryID": 1,
+  "quantityPerUnit": "24 - 250ml cans",
+  "unitPrice": 2.99,
+  "unitsInStock": 200,
+  "unitsOnOrder": 0,
+  "reorderLevel": 50,
+  "discontinued": false
+}
+
+### 9. Update product
+PUT {{productsUrl}}/1
+Content-Type: application/json
+
+{
+  "productID": 1,
+  "productName": "Chai - Premium",
+  "categoryID": 1,
+  "quantityPerUnit": "20 boxes x 25 bags",
+  "unitPrice": 22.00,
+  "unitsInStock": 50,
+  "unitsOnOrder": 10,
+  "reorderLevel": 15,
+  "discontinued": false
+}
+
+### 10. Delete product (use with caution)
+DELETE {{productsUrl}}/11
+
+### ============================================
+### ERROR CASES
+### ============================================
+
+### 11. Get non-existent category (should return 404)
+GET {{categoriesUrl}}/9999
+Accept: application/json
+
+### 12. Get non-existent product (should return 404)
+GET {{productsUrl}}/9999
+Accept: application/json
+
+### 13. Create category with missing required field (should return 400)
+POST {{categoriesUrl}}
+Content-Type: application/json
+
+{
+  "description": "Missing categoryName"
+}
+
+### 14. Update with mismatched ID (should return 400)
+PUT {{categoriesUrl}}/1
+Content-Type: application/json
+
+{
+  "categoryID": 2,
+  "categoryName": "Mismatched ID",
+  "description": "ID in URL doesn't match ID in body"
+}
