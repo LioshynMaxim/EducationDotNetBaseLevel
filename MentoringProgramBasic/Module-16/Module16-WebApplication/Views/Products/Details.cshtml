@@ -1,0 +1,60 @@
+@model Module16_WebApplication.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="container mt-4">
+    <h1>Product Details</h1>
+    <hr />
+    
+    <div class="row">
+        <div class="col-md-8">
+            <dl class="row">
+                <dt class="col-sm-4">Product ID</dt>
+                <dd class="col-sm-8">@Model.ProductID</dd>
+
+                <dt class="col-sm-4">Product Name</dt>
+                <dd class="col-sm-8">@Model.ProductName</dd>
+
+                <dt class="col-sm-4">Category</dt>
+                <dd class="col-sm-8">@(Model.Category?.CategoryName ?? "N/A")</dd>
+
+                <dt class="col-sm-4">Supplier</dt>
+                <dd class="col-sm-8">@(Model.Supplier?.CompanyName ?? "N/A")</dd>
+
+                <dt class="col-sm-4">Quantity Per Unit</dt>
+                <dd class="col-sm-8">@Model.QuantityPerUnit</dd>
+
+                <dt class="col-sm-4">Unit Price</dt>
+                <dd class="col-sm-8">@Model.UnitPrice?.ToString("C")</dd>
+
+                <dt class="col-sm-4">Units In Stock</dt>
+                <dd class="col-sm-8">@Model.UnitsInStock</dd>
+
+                <dt class="col-sm-4">Units On Order</dt>
+                <dd class="col-sm-8">@Model.UnitsOnOrder</dd>
+
+                <dt class="col-sm-4">Reorder Level</dt>
+                <dd class="col-sm-8">@Model.ReorderLevel</dd>
+
+                <dt class="col-sm-4">Discontinued</dt>
+                <dd class="col-sm-8">
+                    @if (Model.Discontinued)
+                    {
+                        <span class="badge bg-danger">Yes</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success">No</span>
+                    }
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.ProductID" class="btn btn-warning">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
