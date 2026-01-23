@@ -57,6 +57,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestingClassLibraryHarr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestingClassLibraryOddEven.Tests", "Module-7\UnitTestingClassLibraryOddEven.Tests\UnitTestingClassLibraryOddEven.Tests.csproj", "{92B5C098-C297-4F7F-9387-8302A5D39178}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database_Module_8", "Database_Module_8\Database_Module_8.sqlproj", "{8C63E5A5-453D-475C-A6C1-97765862B532}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database_TestProject_Module_8", "Database_TestProject_Module_8\Database_TestProject_Module_8.csproj", "{7EB494DA-70D7-4418-BA05-2B670862F98E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +159,16 @@ Global
 		{92B5C098-C297-4F7F-9387-8302A5D39178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92B5C098-C297-4F7F-9387-8302A5D39178}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92B5C098-C297-4F7F-9387-8302A5D39178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C63E5A5-453D-475C-A6C1-97765862B532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C63E5A5-453D-475C-A6C1-97765862B532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C63E5A5-453D-475C-A6C1-97765862B532}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8C63E5A5-453D-475C-A6C1-97765862B532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C63E5A5-453D-475C-A6C1-97765862B532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C63E5A5-453D-475C-A6C1-97765862B532}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7EB494DA-70D7-4418-BA05-2B670862F98E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB494DA-70D7-4418-BA05-2B670862F98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB494DA-70D7-4418-BA05-2B670862F98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB494DA-70D7-4418-BA05-2B670862F98E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
