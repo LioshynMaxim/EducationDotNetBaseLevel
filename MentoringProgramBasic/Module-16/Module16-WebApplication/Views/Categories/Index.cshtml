@@ -1,0 +1,28 @@
+@model IEnumerable<Module16_WebApplication.Models.Category>
+
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<div class="container mt-4">
+    <h1>Categories</h1>
+    <hr />
+    
+    <div class="row">
+        @foreach (var category in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@category.CategoryName</h5>
+                        <p class="card-text">@category.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    
+    <div class="mt-3">
+        <a asp-action="Index" asp-controller="Home" class="btn btn-secondary">Back to Home</a>
+    </div>
+</div>

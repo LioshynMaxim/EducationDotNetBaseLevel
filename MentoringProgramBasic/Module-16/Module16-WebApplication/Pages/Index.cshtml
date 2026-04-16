@@ -1,0 +1,31 @@
+@page
+@model Module16_WebApplication.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Northwind Traders</h1>
+    <p class="lead">Your one-stop shop for quality products</p>
+    
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Categories</h5>
+                    <p class="card-text">Browse our product categories</p>
+                    <a asp-page="/Categories" class="btn btn-primary">View Categories</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Products</h5>
+                    <p class="card-text">Explore our full product catalog</p>
+                    <a asp-page="/Products" class="btn btn-primary">View Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
